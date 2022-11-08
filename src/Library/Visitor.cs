@@ -19,9 +19,5 @@ namespace Library
 
         public abstract void Visit(Person person);
         
-        /*{
-            ageSumatory+=person.Age;
-        }
-        */
     }
 }

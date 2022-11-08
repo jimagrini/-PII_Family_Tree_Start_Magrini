@@ -7,31 +7,33 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            Person Fuentes = new Person("Jose Fuentes", 67);
-            Person Balbi = new Person("Alejandro Balbi", 60);
-            Person Repetto = new Person("Pablo Repetto", 48);
-            Node n1 = new Node(Fuentes);
-            Node n2 = new Node(Balbi);
-            Node n3 = new Node(Repetto);
+            Node n1 = new Node(new Person("Jose Fuentes", 67));
+            Node n2 = new Node(new Person("Pablo Repetto", 48));
+            Node n3 = new Node(new Person("Pablo Repetto", 48));
             Node n4 = new Node(new Person("Luis Suarez", 35));
-            Node n5 = new Node(new Person("Sergio Rochet", 29));
+            Node n5 = new Node(new Person("Antonio Palma", 42));
             Node n6 = new Node(new Person("Camilo Candido", 24));
             Node n7 = new Node(new Person("Christian Almeida", 23));
-
+            
             n1.AddChildren(n2);
             n1.AddChildren(n3);
-            Console.WriteLine(n1.childsAgeCalculator());
-            Console.WriteLine(n1.oldestChildCalculator());
-            Console.WriteLine(n1.longestChildNameCalculator());
-/*
+            n1.AddChildren(n5);
+
             n3.AddChildren(n4);
-            n3.AddChildren(n5);
+            n3.AddChildren(n6);
+            n3.AddChildren(n7);
 
-            n4.AddChildren(n6);
-            n5.AddChildren(n7);
-
-*/
             // visitar el árbol aquí
+            Console.WriteLine($"La suma de los hijos de {n1.Person.Name} = "+n1.childsAgeCalculator());
+            Console.WriteLine($"El hijo mas grande de {n1.Person.Name} tiene "+n1.oldestChildCalculator());
+            Console.WriteLine($"El hijo de {n1.Person.Name} con el nombre mas largo es "+n1.longestChildNameCalculator());
+
+            Console.WriteLine("---------------------------------");
+
+            Console.WriteLine($"La suma de los hijos de {n3.Person.Name} = "+n3.childsAgeCalculator());
+            Console.WriteLine($"El hijo mas grande de {n3.Person.Name} tiene "+n3.oldestChildCalculator());
+            Console.WriteLine($"El hijo de {n3.Person.Name} con el nombre mas largo es "+n3.longestChildNameCalculator());
+            
         }
     }
 }

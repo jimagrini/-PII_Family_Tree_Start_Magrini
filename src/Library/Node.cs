@@ -10,7 +10,19 @@ namespace Library
         {
             this.Person = person;
         }
-        public Person Person { get; set; }
+        
+        private Person person;
+        public Person Person
+        {
+            get
+            {
+                return this.person;
+            }
+            set
+            {
+                this.person=value;
+            }
+        }
 
         private List<Node> children = new List<Node>();
 

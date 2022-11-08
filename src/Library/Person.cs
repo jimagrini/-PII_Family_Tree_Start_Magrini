@@ -11,9 +11,19 @@ namespace Library
         {
             visitor.Visit(this);
         }
-        
-        public string Name {get ; set;}
 
+        private string name;
+        public string Name
+        {
+            get
+            {
+                return this.name;
+            }
+            set
+            {
+                this.name=value;
+            }
+        }
         public int Age {get; set;}
         public Person(string name, int age)
         {

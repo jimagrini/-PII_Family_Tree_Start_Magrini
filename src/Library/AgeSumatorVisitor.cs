@@ -6,7 +6,7 @@ namespace Library
 {
     public class AgeSumatorVisitor: Visitor
     {
-        int ageSumatory;
+        private int ageSumatory;
         public override void Visit(Person person)
         {
             ageSumatory+=person.Age;

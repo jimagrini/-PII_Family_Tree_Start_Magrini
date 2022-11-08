@@ -6,7 +6,7 @@ namespace Library
 {
     public class LongestVisitor: Visitor
     {
-        string Longest= "";
+        private string Longest= "";
         public override void Visit(Person person)
         {
             if((person.Name.Length>Longest.Length))

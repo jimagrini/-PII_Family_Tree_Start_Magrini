@@ -6,7 +6,7 @@ namespace Library
 {
     public class OldestVisitor: Visitor
     {
-        int Oldest;
+        private int Oldest;
         public override void Visit(Person person)
         {
             if(person.Age>Oldest)
