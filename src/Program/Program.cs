@@ -7,13 +7,13 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            Node n1 = new Node(new Person("Jose Fuentes", 67));
-            Node n2 = new Node(new Person("Pablo Repetto", 48));
-            Node n3 = new Node(new Person("Pablo Repetto", 48));
-            Node n4 = new Node(new Person("Luis Suarez", 35));
-            Node n5 = new Node(new Person("Antonio Palma", 42));
-            Node n6 = new Node(new Person("Camilo Candido", 24));
-            Node n7 = new Node(new Person("Christian Almeida", 23));
+            Node n1 = new Node("Jose Fuentes", 67);
+            Node n2 = new Node("Pablo Repetto", 48);
+            Node n3 = new Node("Pablo Repetto", 48);
+            Node n4 = new Node("Luis Suarez", 35);
+            Node n5 = new Node("Antonio Palma", 42);
+            Node n6 = new Node("Camilo Candido", 24);
+            Node n7 = new Node("Christian Almeida", 23);
             
             n1.AddChildren(n2);
             n1.AddChildren(n3);

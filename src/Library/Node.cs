@@ -6,9 +6,9 @@ namespace Library
 {
     public class Node
     {
-        public Node(Person person)
+        public Node(string name, int age)
         {
-            this.Person = person;
+            this.Person = new Person(name, age);
         }
         
         private Person person;
@@ -34,7 +34,6 @@ namespace Library
             }
             set
             {
-
             }
         }
         public void AddChildren(Node n)
